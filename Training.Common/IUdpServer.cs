@@ -11,6 +11,8 @@ namespace Training.Common
 
 	public interface IUdpServer
 	{
+		int Port { get; set; }
+
 		bool IsOpen { get; }
 
 		void Open();
