@@ -38,11 +38,6 @@ namespace Training.Common
 		/// Message type.
 		/// </summary>
 		AppMessageType MessageType { get; set; }
-
-		/// <summary>
-		/// Message itself
-		/// </summary>
-		byte[] Message { get; set; }
 	}
 
 	/// <summary>
