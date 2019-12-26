@@ -17,8 +17,14 @@ namespace Training.Common
 	/// <summary>
 	/// OTA (Over-the-air) App Message Structure:
 	/// 
-	///  0  1  2  3  4         5          6 .. N-2      n-2  n-1
-	/// [    MsgId    ] [ Message Type ] [ Message ] [ CRC16_CCITT ]
+	///     0  -  3          4 - 5         6 .. N-2    n-2 n-1
+	/// [    MsgId    ] [ Message Type ] [ Message ] [ MSB LSB ]
+	/// 
+	/// MsgId        - Message Id
+	/// Message Type - 
+	/// Message      - Message
+	/// CRC16_CCITT  - 2-byte CRC calculated using TrainingUtils.CRC16_CCITT.
+	/// 
 	/// </summary>
 	public interface IAppMessage 
 		: IUdpMessage
