@@ -1,3 +1,5 @@
 /.vs
 /Training.Common/bin
 /Training.Common/obj
+/Training.Common.Tests
+/TrainingTests
